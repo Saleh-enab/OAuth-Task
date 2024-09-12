@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        .welcome-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .user-name {
+            color: #4285F4;
+            font-weight: bold;
+        }
+
+        .logout-btn {
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #357AE8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-container">
+        <h1>Hello, <span class="user-name">
+                <%= user.name %>
+            </span>!</h1>
+        <p>Welcome to your protected area.</p>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</body>
+
+</html>
